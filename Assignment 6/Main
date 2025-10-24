@@ -1,0 +1,37 @@
+// Software Dev 1: Assignment 6 - Martijn van Berk
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+
+        // 1. create 5 students
+        student student1 = new student("Tom Hanks", "Senior", 3.7, 0001);
+        student student2 = new student("Bobby Hill", "Junior", 2.9, 0002);
+        student student3 = new student("Jean-Luc Picard", "Senior", 4.0, 0003);
+        student student4 = new student("Troy Smith", "Sophomore", 3.1, 0004);
+        student student5 = new student("Jon Michaels", "Freshman", 2.5, 0005);
+
+        // 3. check honor roll status for each student
+        System.out.println("\nThe following students are on honor roll:\n");
+        student1.honorRoll();
+        student2.honorRoll();
+        student3.honorRoll();
+        student4.honorRoll();
+        student5.honorRoll();
+
+        // 5. check free lunch status for each student
+        System.out.println("\nThe following students will get a free lunch today:\n");
+        student1.freeLunch();
+        student2.freeLunch();
+        student3.freeLunch();
+        student4.freeLunch();
+        student5.freeLunch();
+    }
+}
+
+/*
+The main thing I learned from this assignment is how to use the random method better lmao. I just looked up how to use
+Math.random() to set a min and max value (basically just multiply it by the range, then you can convert to int and +1
+to make the top number inclusive rather than exclusive).
+ */
