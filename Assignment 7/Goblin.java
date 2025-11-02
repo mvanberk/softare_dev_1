@@ -5,14 +5,14 @@ public class Goblin extends Enemy{
     }
 
     void attack(Enemy target) {
-        if (target.health <= 0) {
+        if (target.health <= 0) { //checks if target is already dead
             System.out.println(name + " tries to gobble " + target.name + " but " + target.name + " is already dead.");
             System.out.println();
             return;
         }
-        System.out.println(name + " gobbles and inflicts " + damage + " damage to " + target.name + "!");
+        System.out.println(name + " gobbles and inflicts " + damage + " damage to " + target.name + "!"); //inflict damage
         target.health = target.health - damage;
-        if (target.health <= 0) {
+        if (target.health <= 0) {  //checks if attack killed target
             System.out.println(target.name + " has been goblinated!");
         }
         else {
